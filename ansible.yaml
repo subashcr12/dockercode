@@ -1,0 +1,8 @@
+- host: all
+  remote_user: ec2-user
+  become: yes
+  tasks:
+     name: deploy of deployment file
+     command: kubectl apply -f /home/ec2-user/deployment.yaml
+     name: deploy of service file
+     command: kubectl apply -f /home/ec2-user/service.yaml
